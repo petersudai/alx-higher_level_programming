@@ -2,6 +2,6 @@
 
 def uppercase(string):
     for char in string:
-        uppercase_char = chr(ord(char) - 32) if 'a' <= char <= 'z' else char
+        uppercase_char = chr(ord(char) - 32) if 97 <= ord(char) <= 122 else char
         print(uppercase_char, end="")
         print()
