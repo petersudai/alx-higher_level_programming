@@ -2,11 +2,10 @@
 import sys
 
 if __name__ == "__main__":
-    argc = len(sys.argv) - 1
-    arg_str = "arguments" if argc != 1 else "argument"
-    plural_suffix = 's' if argc != 1 else ''
+    num_args = len(argv) - 1
+    args_list = argv[1:]
 
-    print("{} {}{}{}".format(argc, arg_str, plural_suffix, ":" if argc else "."))
+    print("{} argument{}{}".format(num_args, 's' if num_args != 1 else '', ':' if num_args != 0 else "."))
 
-    for i, arg in enumerate(sys.argv[1:], start=1):
+    for i, arg in enumerate(arg_list, 1):
         print("{}: {}".format(i, arg))
