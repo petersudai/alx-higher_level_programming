@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 
-import string; print(*(string.ascii_uppercase), sep='', end='\n')
+import string; print(''.join([*string.ascii_uppercase]), end='\n')
