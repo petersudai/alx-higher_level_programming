@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
 import dis
-import marshal
 
 def print_hidden_names():
     with open("hidden_4.pyc", "rb") as file:
         magic = file.read(4)
-        timestamp = file.read(4)
-        code_object = marshal.load(file)
+        file.readline()
+        bytecode = file.read()
 
-    names = {name for name in code_object.co_names if not name.startswith('__')]
-    names.sort()
+    for instruction in code:
+        if instruction.opname == 'LOAD_GLOBAL' and not instruction.argrepr.startswith(('__')):
+            names.add(instruction.argrepr)
 
-    for name in names:
+    sorted_names = sorted(names)
+    for name in sorted(names):
         print(name)
 
 if __name__ == "__main__":
