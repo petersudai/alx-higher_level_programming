@@ -1,3 +1,4 @@
+>>> MyList = __import__("1-my_list").MyList
 if __name__ == "__main__":
     # Test case 1: Empty list
     my_list1 = MyList()
