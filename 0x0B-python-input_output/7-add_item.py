@@ -3,6 +3,10 @@
 Add item
 """
 import sys
+from os.path import exists
+from json import load, dump
+from save_to_json_file import save_to_json_file
+from load_from_json_file import load_from_json_file
 
 
 def add_item(args):
