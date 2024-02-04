@@ -26,7 +26,7 @@ class Rectangle:
             self.__width = value
 
     @property
-    def height(self)):
+    def height(self):
         """Getter method for the height attribute"""
         return self.__height
 
@@ -52,7 +52,7 @@ class Rectangle:
 
     def __str__(self):
         """Returns a string representation of the rectangle"""
-        if self.width == 0 or self.heigh == 0:
+        if self.width == 0 or self.height == 0:
             return ""
         return "\n".join(["#" * self.width for _ in range(self.height)])
 
