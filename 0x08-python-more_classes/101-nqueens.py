@@ -22,6 +22,7 @@ def is_safe(board, row, col):
 
     return True
 
+
 def solve_nqueens(board, col):
     # If all queens are place, print the solution
     if col >= N:
@@ -41,11 +42,20 @@ def solve_nqueens(board, col):
             # then remove queen from board[i][col]
             board[i][col] = 0
 
-    # If queen can not be place in any row in this column col, then return False
+    # If queen cant be place in any row in this column col, then return False
     return res
 
+
 def print_solution(board):
-    solutions.append([[row, col] for row in range(N) for col in range(N) if board[row][col]])
+    solutions.append(
+            [
+                [row, col]
+                for row in range(N)
+                for col in range(N)
+                if board[row][col]
+            ]
+    )
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
