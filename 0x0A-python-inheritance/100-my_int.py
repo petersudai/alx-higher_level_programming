@@ -17,4 +17,3 @@ class MyInt(int):
         overides the != operator
         """
         return super().__eq__(other)
-
