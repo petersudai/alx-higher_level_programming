@@ -9,4 +9,4 @@ const destinationFile = process.argv[4];
 const dataA = fs.readFileSync(fileA, 'utf8');
 const dataB = fs.readFileSync(fileB, 'utf8');
 const concatenatedData = dataA + '\n' + dataB;
-fs.writeFileSync(destinationFile, concatenatedData);;
+fs.writeFileSync(destinationFile, concatenatedData);
