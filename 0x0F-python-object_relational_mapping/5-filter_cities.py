@@ -28,7 +28,7 @@ if __name__ == "__main__":
             """
 
     # Execute SQL query
-    currsor.execute(query, (state_name,))
+    cursor.execute(query, (state_name,))
 
     # Fetch all the results
     cities = cursor.fetchall()
