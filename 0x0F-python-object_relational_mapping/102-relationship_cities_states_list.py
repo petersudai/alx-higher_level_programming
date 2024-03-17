@@ -17,7 +17,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
 
     # Create configured "Session" class
-    Session = session =maker(bind=engine)
+    Session = sessionmaker(bind=engine)
 
     # Create a Session
     session = Session()
