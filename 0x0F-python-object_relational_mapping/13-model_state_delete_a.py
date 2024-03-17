@@ -15,8 +15,6 @@ if __name__ == "___main__":
                            .format(username, password, db_name),
                            pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
-
     Session = sessionmaker(bind=engine)
     session = Session()
 
