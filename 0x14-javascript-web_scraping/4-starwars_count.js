@@ -21,7 +21,7 @@ function countWedgeAntillesMovies (apiUrl) {
     const films = JSON.parse(body).results;
 
     const wedgeAntillesMovies = films.filter(film =>
-      film.characters.includes(`https://swapi-alx.alx-tools.com/api/people/${WEDGE_ANTILLES_ID}/`)
+      film.characters.some(character => character.endsWith(WEDGE_ANTILLES_ID))
     );
 
     console.log(wedgeAntillesMovies.length);
