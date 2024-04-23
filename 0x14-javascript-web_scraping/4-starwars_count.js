@@ -13,6 +13,6 @@ request(process.argv[2], function (error, response, body) {
     });
     console.log(count);
   } else {
-    console.error(error);
+    console.error(error || `Request failed with status code ${response.statusCode}`);
   }
 });
