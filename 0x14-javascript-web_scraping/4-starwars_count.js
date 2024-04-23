@@ -27,3 +27,5 @@ function countWedgeAntillesMovies (apiUrl) {
     console.log(wedgeAntillesMovies.length);
   });
 }
+
+countWedgeAntillesMovies(apiUrl);
